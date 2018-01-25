@@ -1,5 +1,5 @@
 # working directory--------------------------------------------------------------------------------
-setwd("C:/Users/RenkeLuehken/Google Drive/R/microsatellite")
+setwd("C:/Users/RenkeLuehken/Google Drive/Project/albopictus-microsatellites")
 #setwd("G:/NeuAll/R/microsatellite")
 
 # load libraries--------------------------------------------------------------------------------
@@ -75,7 +75,7 @@ EE2[,3:(2+(ncol(dat)/2))] <- EE
 EL <- data.frame(EE2)
 
 # remove Aedes albopictus lab colony
-EL2 <- subset(EL, !(EL[,2] == 1))
+EL2 <- subset(EL, !(EL[,2] == "ALF.x"))
 
 write.table(EL2,"filename.txt",row.names = F,col.names=FALSE, quote=FALSE)
 
