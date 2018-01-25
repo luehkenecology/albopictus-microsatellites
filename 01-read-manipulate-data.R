@@ -74,6 +74,8 @@ EE2[,3:(2+(ncol(dat)/2))] <- EE
 
 EL <- data.frame(EE2)
 
+# remove Aedes albopictus lab colony
+EL2 <- subset(EL, !(EL[,2] == 1))
 
 write.table(EL2,"filename.txt",row.names = F,col.names=FALSE, quote=FALSE)
 
